@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadcopter Drone Features</title>
+    
+    <!-- External CSS for icons (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Internal CSS -->
+    <style>
+        /* Feature Section Styling */
+        .features-section {
+            background-image: url('quadcopter drone design.png'); /* Correcting background image usage */
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color:wheat;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Drone Features Section -->
+    <section id="drone-features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Quadcopter Drone Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h3>AI-Powered Navigation</h3>
+                    <p>Advanced AI for real-time navigation and obstacle avoidance in complex environments.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-video feature-icon"></i>
+                    <h3>4K Ultra HD Camera</h3>
+                    <p>Capture stunning aerial footage with a high-resolution 4K Ultra HD camera.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-map feature-icon"></i>
+                    <h3>Real-Time Mapping</h3>
+                    <p>Precise mapping with LiDAR and GPS for accurate terrain analysis.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-battery-full feature-icon"></i>
+                    <h3>Long Battery Life</h3>
+                    <p>Extended battery life to ensure long-duration missions without interruptions.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-cloud feature-icon"></i>
+                    <h3>Weather Resistant</h3>
+                    <p>Built to withstand harsh weather conditions for uninterrupted operations.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Enhanced Security</h3>
+                    <p>Equipped with anti-jamming technology and secure communication protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internal JavaScript for hover animation -->
+    <script>
+        const features = document.querySelectorAll('.feature-item');
+        features.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'translateY(-10px)';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+
+</body>
+</html>

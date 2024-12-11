@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bharat Drone Innovations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 1200px;
+        }
+
+        header {
+            background: #0c74b3;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header nav {
+            margin-top: 20px;
+        }
+        header nav ul {
+            list-style: none;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+    background: url('Team BHARAT Logo.png') no-repeat center center;
+    background-size: cover; /* This ensures the image covers the entire section */
+    height: 150vh; /* Full viewport height */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    animation: backgroundMoveUpDown 4s ease-in-out infinite;
+}
+
+/* Animation for moving the background image */
+@keyframes backgroundMoveUpDown {
+    0% {
+        background-position: center 0;
+    }
+    50% {
+        background-position: center 20px; /* Adjust this value for more/less movement */
+    }
+    100% {
+        background-position: center 0;
+    }
+}
+
+        .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+        .hero a {
+            padding: 10px 20px;
+            background: #fff;
+            color: #0c74b3;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 30px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        /* Core Section */
+        .core-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .core-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .core-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        .core-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .core-card {
+            background: #fff;
+            padding: 20px;
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .core-card img {
+            width: 100%;
+            height: auto;
+        }
+        .core-card h3 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+        .core-card p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        /* Team Section */
+        .team-section {
+            background: #0c74b3;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .team-section h2 {
+            font-size: 2rem;
+        }
+        .team-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .team-card {
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .team-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .team-card p {
+            font-size: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 40px;
+            text-align: center;
+        }
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .contact-section form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-section form input,
+        .contact-section form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-section form button {
+            padding: 10px 20px;
+            background: #0c74b3;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #0c74b3;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .core-cards,
+            .team-cards {
+                flex-direction: column;
+            }
+        }
+        .video-section .videos {
+            background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.video iframe {
+    width: 1050px;
+    height: 500px;
+    background-color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bharat Drone Innovations</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Drones</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Revolutionizing Healthcare, Defense & Agriculture</h1>
+            <p>Leading India's Drone Revolution with AI-powered, Autonomous Drone Solutions.</p>
+            <a href="#">Explore Our Drones</a>
+        </div>
+    </section>
+
+    <section class="core-section">
+        <div class="container">
+            <h2>Our Expertise in Drones</h2>
+            <p>Bharat Drone Innovations offers cutting-edge drone solutions for healthcare, defense, and agriculture. Our AI-powered autonomous systems are designed for organ delivery, precision agriculture, and enhanced defense operations.</p>
+            <div class="core-cards">
+                <div class="core-card">
+                    <img src="organ delhivery drone 2.png" alt="Drone 1">
+                    <h3>Organ Delivery Drone</h3>
+                    <p>Autonomous drone with AI-regulated compartments for life-saving organ delivery.</p>
+                </div>
+                <div class="core-card">
+                    <img src="organ delhivery drone.png" alt="Drone 1">
+                    <h3>Organ Delivery Drone</h3>
+                    <p>Autonomous drone with AI-regulated compartments for life-saving organ delivery.</p>
+                </div>
+                <div class="core-card">
+                    <img src="suicidal defence agiculure organ delhivery  2.png" alt="Drone 1">
+                    <h3>suicidal defence agiculure organ delhivery</h3>
+                    <p>Autonomous drone with AI-regulated compartments for life-saving organ delivery.</p>
+                </div>
+                
+                
+                <div class="core-card">
+                    <img src="AGriculture 1.png" alt="Drone 2">
+                    <h3>Precision Agriculture Drone</h3>
+                    <p>High-end drone technology for crop monitoring, pest control, and farm automation.</p>
+                </div>
+                <div class="core-card">
+                    <img src="AGriculture 2.png" alt="Drone 2">
+                    <h3>Precision Agriculture Drone</h3>
+                    <p>High-end drone technology for crop monitoring, pest control, and farm automation.</p>
+                </div>
+                <div class="core-card">
+                    <img src="AGriculture_4-removebg-preview.png" alt="Drone 2">
+                    <h3>Precision Agriculture Drone</h3>
+                    <p>High-end drone technology for crop monitoring, pest control, and farm automation.</p>
+                </div>
+                <div class="core-card">
+                    <img src="fpv_drone_defence-removebg-preview.png" alt="Drone 3">
+                    <h3>Defense FPV  Surveillance Drone</h3>
+                    <p>AI-powered FPV Defence surveillance drones for enhanced security and tactical operations.</p>
+                </div>
+                <div class="core-card">
+                    <img src="dfenece 4 suicidal drone.png" alt="Drone 3">
+                    <h3>Defense suicidal Drone</h3>
+                    <p>AI-powered surveillance drones for enhanced security and tactical operations.</p>
+                </div>
+                <div class="core-card">
+                    <img src="quadcopter drone design 1.png" alt="Drone 3">
+                    <h3><a href="quadcopter.html" class="quadcopter-link">Quadcopter</a></h3>
+                    <p>AI-powered surveillance drones for enhanced security and tactical operations.</p>
+                </div>
+                <div class="core-card">
+                    <img src="ballistic misle 1.png" alt="Drone 3">
+                    <h3>Defense Surveillance Drone</h3>
+                    <p>AI-powered surveillance drones for enhanced security and tactical operations.</p>
+                </div>
+                <div class="core-card">
+                    <img src="dfenece 2.png" alt="Drone 3">
+                    <h3>Defense Surveillance Drone</h3>
+                    <p>AI-powered surveillance drones for enhanced security and tactical operations.</p>
+                </div>
+                <div class="core-card">
+                    <img src="dfenece 1.png" alt="Drone 3">
+                    <h3>Defense Surveillance Drone</h3>
+                    <p>AI-powered surveillance drones for enhanced security and tactical operations.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Video Section -->
+<section class="video-section">
+    <div class="container">
+        <h2>Watch Our Drones in Action</h2>
+        <div class="videos">
+            <div class="video">
+                <iframe src="This is our Team BHARAT (2) (1).mp4" frameborder="0" width="1000" height="1000" allowfullscreen></iframe>
+           
+            <div class="video">
+                <iframe src="IMC BHARAT DRONE INNOVATIONS (1).mp4" frameborder="0" width="1000" height="1000" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="Saura.png" alt="Saurajyoti Bhattacharjee">
+                    <h3>Saurajyoti Bhattacharjee</h3>
+                    <p>Chief Operational Officer| Software Developer | AI Developer</p>
+                </div>
+                <div class="team-card">
+                    <img src="Shaik Sameer Pasha Hardware Developer CAD developer 3rd Year SRMIST.png" alt="Shaik Sameer Pasha">
+                    <h3>Shaik Sameer Pasha</h3>
+                    <p>Chief Executive Officer| Hardware Developer | CAD Developer</p>
+                </div>
+                <div class="team-card">
+                    <img src="Dr.C.Muralidharan Assistant Professor SRMIST.png" alt="Dr. C. Muralidharan">
+                    <h3>Dr. C. Muralidharan</h3>
+                    <p>Design Expert and Patent Drafter | Project Manager I | Faculty at SRMIST University</p>
+                </div>
+                <div class="team-card">
+                    <img src="DR.V. Arulalan Assistant Professor SRMIST.png" alt=" Dr. V. Arulalan">
+                    <h3> Dr. V. Arulalan</h3>
+                    <p>IoT-Enabled Product Development | Project Manager II | Faculty at SRMIST University</p>
+                </div>
+                <div class="team-card">
+                    <img src="Abhishek Sinha Co-Founder Eko Indian Financial Service.png" alt="Mr. Abishek Sinha">
+                    <h3>Mr. Abishek Sinha</h3>
+                    <p>Executive Support: Business Mentor| Co-founder & CEO, Eko India Financial Services</p>
+                </div>
+                <div class="team-card">
+                    <img src="Mahesh Kumar Hota Ex Indian Airforce Officer ITOPS Indian Millitary Service.png" alt="Mr. Mahesh Kumar Hota">
+                    <h3>Mr. Mahesh Kumar Hota</h3>
+                    <p>Executive Support: Aviation Expert | MRO Services Supervisor and ITOps in Military Aviation, Indian Air Force (IAF)
+                    </p>
+                </div>
+                <div class="team-card">
+                    <img src="yash.png" alt="Yash Jha">
+                    <h3>Yash Jha</h3>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bharat Drone Innovations. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
